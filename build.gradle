@@ -1,8 +1,8 @@
 buildscript {
   ext.versions = [
       minSdk          : 21,
-      compileSdk      : 26,
-      supportLib      : '27.1.0',
+      compileSdk      : 28,
+      supportLib      : '28.0.0',
       glide           : '4.6.1',
       autoValue       : '1.4',
       autoValueMoshi  : '0.4.3',
@@ -27,6 +27,7 @@ buildscript {
   repositories {
     google()
     jcenter()
+    maven {url 'https://jitpack.io' }
   }
 
   dependencies {

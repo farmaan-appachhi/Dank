@@ -1,6 +1,5 @@
 package me.saket.dank.ui.user.messages;
 
-import static junit.framework.Assert.assertEquals;
 
 import net.dean.jraw.models.Message;
 
@@ -32,13 +31,11 @@ public enum InboxMessageType {
       switch (fullNameType) {
         case COMMENT:
           if (BuildConfig.DEBUG) {
-            assertEquals("comment reply", message.getSubject());
           }
           return InboxMessageType.COMMENT_REPLY;
 
         case SUBMISSION:
           if (BuildConfig.DEBUG) {
-            assertEquals("post reply", message.getSubject());
           }
           return InboxMessageType.POST_REPLY;
 

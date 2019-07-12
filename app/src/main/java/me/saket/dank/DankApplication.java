@@ -54,14 +54,6 @@ public class DankApplication extends Application {
       Stetho.initializeWithDefaults(this);
       Traceur.enableLogging();  // Throws an exception in every operator, so better enable only on debug builds
 
-      StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()
-          .detectAll()
-          .build());
-      StrictMode.setVmPolicy(new StrictMode.VmPolicy.Builder()
-          .detectLeakedSqlLiteObjects()
-          .penaltyLog()
-          .penaltyDeath()
-          .build());
     }
 
     ViewPump.init(ViewPump.builder()
